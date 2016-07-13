@@ -78,7 +78,11 @@ public class Main {
                 FileDialog dialog = new FileDialog(shell, SWT.OPEN);
                 dialog.setFilterPath(System.getProperty("user.home") + File.separator + strDesktop);
                 String fileOutputPath = dialog.open();
-
+                
+                Generator.setOutputFilePath(fileOutputPath);
+                System.out.println(fileOutputPath);
+                
+                
                 System.out.println(fileOutputPath);
             }
         });
@@ -92,8 +96,7 @@ public class Main {
                 DirectoryDialog dialog = new DirectoryDialog(shell, SWT.OPEN);
                 dialog.setFilterPath(System.getProperty("user.home") + File.separator + strDesktop);
                 String fileOutputPath = dialog.open();
-
-                System.out.println(fileOutputPath);
+              
 
             }
         });
